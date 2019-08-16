@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--[Page design adapted from Slate theme by <a href="https://github.com/jasoncostello">Jason Costello</a>]-->
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Geometry with an Introduction to Cosmic Topology" />
+    <meta name="keywords" content="Mike Hitchman">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="icon" href="../images/favicon.gif">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <title>GCT - TikZ Figures</title>
+  </head>
+
+<body>
+
+<img src="https://mphitchman.github.io/geometry/images/im-pqtoreal.svg"/>
+
+<pre>
+\begin{tikzpicture}
+          \clip (0,0) circle (2.5cm);
+          \tkzDefPoint(0,0){o}
+          \tkzDefPoint(2,0){a}
+          \tkzDefPoint(130:1.2){p}
+          \tkzDefPoint(80:1.4){q}
+          \tkzDefPoint(1.2,0){x}
+          \tkzDefPoint(-2,0){b}
+          \draw (b)--(a);
+          \draw[very thick, color=blue](o)--(x);
+          \tkzDrawCircle[dashed,color=blue](o,a)
+          \tkzDefCircle[orthogonal through=p and q](o,a) \tkzGetPoint{c}
+          \tkzInterCC(o,a)(c,p) \tkzGetPoints{v}{u}
+          \tkzDrawArc(c,v)(u)
+          \tkzDrawArc[very thick, color=blue](c,p)(q)
+          \tkzDrawPoints[size=2,fill=red](o,p,q,x)
+          \tkzDrawPoints[size=2,fill=white](u,v,b,a)
+          \tkzLabelPoints[below](p,q,x)
+          \tkzLabelPoint[below right=-3pt](a){\(1\)}
+          \tkzLabelPoint[below](o){\(0\)}
+          \tkzLabelPoint[above](u){\(u\)}
+          \tkzLabelPoint[left](v){\(v\)}
+          \tkzLabelPoint[below left=-3pt](b){\(-1\)}
+          \draw (.4,.6) node{\(T\)};
+          \draw[->] (-.08,.8)--(.4,.2);
+\end{tikzpicture}
+</pre>
+
+      <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11625953; 
+var sc_invisible=1; 
+var sc_security="f68ed8d5"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="site stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11625953/0/f68ed8d5/1/" alt="site
+stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

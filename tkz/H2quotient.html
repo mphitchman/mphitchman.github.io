@@ -1,0 +1,71 @@
+<!DOCTYPE html><!--[Page design adapted from Slate theme by <a href="https://github.com/jasoncostello">Jason Costello</a>]-->
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Geometry with an Introduction to Cosmic Topology" />
+    <meta name="keywords" content="Mike Hitchman">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="icon" href="../images/favicon.gif">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <title>GCT - TikZ Figures</title>
+  </head>
+
+<body>
+
+<img src="https://mphitchman.github.io/geometry/images/im-H2quotient.svg"/>
+
+<pre>
+\begin{tikzpicture}[scale=2]
+                  \clip (0,0) circle (1cm);
+                  \coordinate (o) at (0,0);
+                  \coordinate (a) at (1,0);
+                  \def\r{.8409};
+                  \tkzDrawCircle[dashed,color=blue](o,a)
+                  \foreach \x in {0,1,...,7} \tkzDefPoint(\x*45:\r){\x};
+                  \hypsegment{1}{0}{o}{a}
+                  \hypsegment{2}{1}{o}{a}
+                  \hypsegment{3}{2}{o}{a}
+                  \hypsegment{4}{3}{o}{a}
+                  \hypsegment{5}{4}{o}{a}
+                  \hypsegment{6}{5}{o}{a}
+                  \hypsegment{7}{6}{o}{a}
+                  \hypsegment{0}{7}{o}{a}
+                  \draw[dashed] (157.5:1)--(157.5:-1);
+                  \tkzDrawPoints(o,0,1,2,3,4,5,6,7)
+                  \foreach \t in {22.5,67.5,202.5,247.5} {\draw[arrowMe=stealth] (\t:.645)--(\t-.1:.645);}
+                  \foreach \t in {112.5,157.5,292.5,337.5} {\draw[arrowMe=stealth] (\t:.645)--(\t+.1:.645);}
+                  \draw (22.5:.75) node{\(a\)};
+                  \draw (67.5:.75) node{\(b\)};
+                  \draw (112.5:.75) node{\(c\)};
+                  \draw (145:.8) node{\(d\)};
+                  \draw (202.5:.75) node{\(c\)};
+                  \draw (247.5:.75) node{\(d\)};
+                  \draw (292.5:.75) node{\(a\)};
+                  \draw (325:.8) node{\(b\)};
+                  \draw (342:.85) node{\(m\)};
+                  \end{tikzpicture}
+</pre>
+
+      <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11625953; 
+var sc_invisible=1; 
+var sc_security="f68ed8d5"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="site stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11625953/0/f68ed8d5/1/" alt="site
+stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

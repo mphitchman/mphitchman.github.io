@@ -1,0 +1,80 @@
+<!DOCTYPE html><!--[Page design adapted from Slate theme by <a href="https://github.com/jasoncostello">Jason Costello</a>]-->
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Geometry with an Introduction to Cosmic Topology" />
+    <meta name="keywords" content="Mike Hitchman">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="icon" href="../images/favicon.gif">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <title>GCT - TikZ Figures</title>
+  </head>
+
+<body>
+
+<img src="https://mphitchman.github.io/geometry/images/im-handlebodies.svg"/>
+
+<pre>
+\begin{tikzpicture}[scale=.7]
+          \begin{scope}[xshift=.2cm,yshift=3cm]
+            \draw (0,0) circle (1.2cm);
+            \draw (-1.2,0) arc (180:360:1.2 and 0.3);
+            \draw[dashed] (1.2,0) arc (0:180:1.2 and 0.3);
+            \draw (0,-1.5) node{\(H_0\)};
+          \end{scope}
+          \begin{scope}[xshift=4.2cm,yshift=3cm,xscale=.6]
+          \draw (0,0) ellipse (2.5cm and 1cm);
+          \draw (-1.5,.07) arc (180:360:1.5cm and .3cm);
+          \draw (1.2,-.1) arc (0:180:1.2cm and .3cm);
+          \draw (4,0) ellipse (2.5cm and 1cm);
+          \draw (2.5,.07) arc (180:360:1.5cm and .3cm);
+          \draw (5.2,-.1) arc (0:180:1.2cm and .3cm);
+          \fill[color=white](2,.6) to [bend right=50] (1.45,0) to [bend right = 50] (2,-.6) to [bend right=50] (2.55,.0) to [bend right=50] (2,.6);
+          \draw (2,-1.5) node{\(H_2\)};
+          \end{scope}
+          \begin{scope}[xscale=.6]
+          \draw (0,0) ellipse (2.5cm and 1cm);
+          \draw (-1.5,.07) arc (180:360:1.5cm and .3cm);
+          \draw (1.2,-.1) arc (0:180:1.2cm and .3cm);
+          \draw (4,0) ellipse (2.5cm and 1cm);
+          \draw (2.5,.07) arc (180:360:1.5cm and .3cm);
+          \draw (5.2,-.1) arc (0:180:1.2cm and .3cm);
+          \fill[color=white](2,.6) to [bend right=50] (1.45,0) to [bend right = 50] (2,-.6) to [bend right=50] (2.55,.0) to [bend right=50] (2,.6);
+          \begin{scope}[xshift=8.5cm]
+          \draw (0,0) ellipse (2.5cm and 1cm);
+          \draw (-1.5,.07) arc (180:360:1.5cm and .3cm);
+          \draw (1.2,-.1) arc (0:180:1.2cm and .3cm);
+          \draw (4,0) ellipse (2.5cm and 1cm);
+          \draw (2.5,.07) arc (180:360:1.5cm and .3cm);
+          \draw (5.2,-.1) arc (0:180:1.2cm and .3cm);
+          \fill[color=white](2,.6) to [bend right=50] (1.45,0) to [bend right = 50] (2,-.6) to [bend right=50] (2.55,.0) to [bend right=50] (2,.6);
+          \fill[color=white](-2.5,0) ellipse (.53cm and .5cm);
+          \end{scope}
+          \draw (6.2,-1.5) node{\(H_4\)};
+          \end{scope}
+          \end{tikzpicture}
+</pre>
+
+      <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11625953; 
+var sc_invisible=1; 
+var sc_security="f68ed8d5"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="site stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11625953/0/f68ed8d5/1/" alt="site
+stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

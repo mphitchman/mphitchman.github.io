@@ -1,0 +1,58 @@
+<!DOCTYPE html><!--[Page design adapted from Slate theme by <a href="https://github.com/jasoncostello">Jason Costello</a>]-->
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Geometry with an Introduction to Cosmic Topology" />
+    <meta name="keywords" content="Mike Hitchman">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="icon" href="../images/favicon.gif">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <title>GCT - TikZ Figures</title>
+  </head>
+
+<body>
+
+<img src="https://mphitchman.github.io/geometry/images/im-stpro.svg"/>
+
+<pre>
+ \begin{tikzpicture}[scale=.8]
+             \draw[thin] (0,3)-- (0,0) -- (4,0) node[right] {\(x\)};
+             \draw[thin] (0,0)--(-1.9,-1.3) node[below left]{\(y\)};
+             \draw[thin] (-.1,3) node[left]{\(z\)};
+            \draw[dashed] (0,0) -- (3.3,-0.7);
+             \draw[->] (0,2) -- (0.55,1.55);
+             \draw (.55,1.55)--(3.3,-0.7);
+             \draw[color=blue] (0,0) circle (2cm) (-2,0) arc (180:360:2cm and .4cm);
+             \draw[color=blue,dashed] (2,0) arc (0:180:2cm and .4cm);
+             \tkzDefPoint(0,2){N}
+             \tkzDefPoint(1.1,1.1){P}
+             \tkzDefPoint(3.3,-.7){imP}
+             \tkzDrawPoints[fill=red](N,P,imP)
+             \tkzLabelPoint[above right=-1pt](N){\(N\)};
+             \tkzLabelPoint[above right=-2pt](P){\(P=(a,b,c)\)};
+             \tkzLabelPoint[right=-1pt](imP){\(\phi(P)\)};\end{tikzpicture}
+</pre>
+
+      <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11625953; 
+var sc_invisible=1; 
+var sc_security="f68ed8d5"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="site stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11625953/0/f68ed8d5/1/" alt="site
+stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

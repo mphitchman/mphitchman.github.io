@@ -1,0 +1,84 @@
+<!DOCTYPE html><!--[Page design adapted from Slate theme by <a href="https://github.com/jasoncostello">Jason Costello</a>]-->
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Geometry with an Introduction to Cosmic Topology" />
+    <meta name="keywords" content="Mike Hitchman">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="icon" href="../images/favicon.gif">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <title>GCT - TikZ Figures</title>
+  </head>
+
+<body>
+
+<img src="https://mphitchman.github.io/geometry/images/im-kleinbottle.svg"/>
+
+<pre>
+\begin{tikzpicture}
+                  \tikzset{
+                    arrowMe/.style={postaction=decorate,
+                      decoration={markings, mark=at position .55 with {\arrow[very thick]{#1}}
+                      } }}
+                    \draw[arrowMe=stealth](0,0)--node[below]{\(a\)}(5,0);
+                    \draw[arrowMe=stealth](0,3)--node[left]{\(b\)}(0,0);
+                    \draw[arrowMe=stealth](0,3)--node[above]{\(a\)}(5,3);
+                    \draw[arrowMe=stealth](5,0)--node[right]{\(b\)}(5,3);
+                    \draw[dashed](0,1.25)--(5,1.25);
+                    \draw[dashed] (0,1.75)--(5,1.75);
+                      \begin{scope}[xshift=2.5cm,yshift=2cm]
+                        \draw (0,0) rectangle (.4,.4);
+                        \draw (.4,.05) to [bend left=20] (.2,.15);
+                        \fill[color=black](.4,.3) to [bend left=40] (.3,.4) to (.4,.4) to (.4,.3);
+                      \end{scope}
+                      \begin{scope}[xshift=2cm,yshift=2cm]
+                        \draw (0,0) rectangle (.4,.4);
+                        \draw (0,.05) to [bend right=20] (.2,.15);
+                        \fill[color=black](0,.3) to [bend right=40] (.1,.4) to (0,.4) to (0,.3);
+                      \end{scope}
+                      \begin{scope}[xshift=3.8cm,yshift=2.3cm]
+                        \draw (0,0) rectangle (.4,.4);
+                        \draw (.4,.05) to [bend left=20] (.2,.15);
+                        \fill[color=black](.4,.3) to [bend left=40] (.3,.4) to (.4,.4) to (.4,.3);
+                      \end{scope}
+                        \draw (5,2.3)--(4.8,2.3)--(4.8,2.7)--(5,2.7);
+                        \draw (0,.3)--(.2,.3)--(.2,.7)--(0,.7);
+                        \fill[color=black](.1,.3) to [bend left=40] (.2,.4) to (.2,.3) to (.1,.3);
+                        \draw (.2,.65) to [bend right=20] (0,.55);
+                      \begin{scope}[rotate around={240:(1.2,1.2)}]
+                      \begin{scope}[xshift=1cm,yshift=1cm]
+                        \draw (0,0) rectangle (.4,.4);
+                        \draw (0,.05) to [bend right=20] (.2,.15);
+                        \fill[color=black](0,.3) to [bend right=40] (.1,.4) to (0,.4) to (0,.3);
+                      \end{scope}
+                      \end{scope}
+                      \draw[thick,->] (.3,.5)--+(.6,.5);
+                      \draw[thick,->] (1.5,1.4)--+(.4,.5);
+                      \draw[thick,->] (3,2.2)--+(.6,.2);
+                      \draw[thick,->] (4.3,2.5)--+(.4,0);
+\end{tikzpicture}
+</pre>
+
+      <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11625953; 
+var sc_invisible=1; 
+var sc_security="f68ed8d5"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="site stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11625953/0/f68ed8d5/1/" alt="site
+stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

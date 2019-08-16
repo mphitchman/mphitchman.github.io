@@ -1,0 +1,87 @@
+<!DOCTYPE html><!--[Page design adapted from Slate theme by <a href="https://github.com/jasoncostello">Jason Costello</a>]-->
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Geometry with an Introduction to Cosmic Topology" />
+    <meta name="keywords" content="Mike Hitchman">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="icon" href="../images/favicon.gif">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <title>GCT - TikZ Figures</title>
+  </head>
+
+<body>
+
+<img src="https://mphitchman.github.io/geometry/images/im-hypblock.svg"/>
+
+<pre>
+ \begin{tikzpicture}[scale=2]
+                    \clip (0,0) circle (1.25cm);
+                    \coordinate (o) at (0,0);
+                    \coordinate (r) at (1,0);
+                    \coordinate (-1) at (-1,0);
+                    \tkzDefPoint(70:.5){z}
+                    \tkzDefPoint(-70:.5){zbar}
+                    \tkzDefPoint(110:.5){w}
+                    \tkzDefPoint(-110:.5){wbar}
+                    \draw[dashed](-1)--(r);
+                    \tkzCircumCenter(-1,z,r)\tkzGetPoint{c1}
+                    \tkzDrawArc[dashed,color=black](c1,r)(-1)
+                    \tkzCircumCenter(-1,zbar,r)\tkzGetPoint{c2}
+                    \tkzDrawArc[dashed,color=black](c2,-1)(r)
+                    \tkzDrawCircle[dashed,color=blue](o,r)
+                    \tkzDefLine[perpendicular=through z,K=1](c1,z)\tkzGetPoint{pt};
+                    \tkzInterLL(z,pt)(-1,r)\tkzGetPoint{l1}
+                    \tkzInterCC(l1,z)(o,r)\tkzGetPoints{t1}{t2}
+                    \tkzDrawArc[dashed,color=black](l1,t2)(t1)
+                    \tkzCircumCenter(-1,w,r)\tkzGetPoint{d1}
+                    \tkzDefLine[perpendicular=through w,K=1](d1,w)\tkzGetPoint{pt2};
+                    \tkzInterLL(w,pt2)(-1,r)\tkzGetPoint{l2}
+                    \tkzInterCC(l2,w)(o,r)\tkzGetPoints{tw1}{tw2}
+                    \tkzDrawArc[dashed,color=black](l2,tw2)(tw1)
+                    \fill[fill=blue,opacity=0.1] (w) to [bend left=8]  (wbar) to [bend right=5] 
+                    (zbar) to [bend left=8] (z) to [bend right=5] (w);
+                    \tkzDrawArc[color=blue](l2,wbar)(w)
+                    \tkzDrawArc[color=blue](l1,z)(zbar)
+                    \tkzDrawArc[color=blue](c1,z)(w)
+                    \tkzDrawArc[color=blue](c2,wbar)(zbar)
+                    \tkzInterLC(o,r)(l1,z)\tkzGetPoints{a}{a1}
+                    \tkzInterLC(o,r)(l2,w)\tkzGetPoints{am1}{am}
+                    \tkzDrawPoints[fill=red](z,a)
+                    \tkzDrawPoints(zbar,-1,r,w,wbar,am)
+                    \tkzLabelPoint[right](r){\(1\)}
+                    \tkzLabelPoint[left](-1){\(-1\)}
+                    \tkzLabelPoint[above right](z){\(z\)}
+                    \tkzLabelPoint[below right](zbar){\(\overline{z}\)}
+                    \tkzLabelPoint[below right](a){\(a\)}
+                    \tkzLabelPoint[below left=-2pt](am){\(-a\)}
+                    \draw (75:1.1) node{\(L_1\)};
+                    \draw (105:1.1) node{\(L_2\)};
+                    \draw (30:.84) node{\(C_1\)};
+                    \draw (-30:.84) node{\(C_2\)};
+\end{tikzpicture}
+</pre>
+
+      <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11625953; 
+var sc_invisible=1; 
+var sc_security="f68ed8d5"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="site stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11625953/0/f68ed8d5/1/" alt="site
+stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

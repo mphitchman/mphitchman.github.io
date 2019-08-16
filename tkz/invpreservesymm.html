@@ -1,0 +1,86 @@
+<!DOCTYPE html><!--[Page design adapted from Slate theme by <a href="https://github.com/jasoncostello">Jason Costello</a>]-->
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Geometry with an Introduction to Cosmic Topology" />
+    <meta name="keywords" content="Mike Hitchman">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="icon" href="../images/favicon.gif">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <title>GCT - TikZ Figures</title>
+  </head>
+
+<body>
+
+<img src="https://mphitchman.github.io/geometry/images/im-invpreservesymm.svg"/>
+
+<pre>
+\begin{tikzpicture}[extended line/.style={shorten >=-#1,shorten <=-#1},extended line/.default=1.2cm]
+          \tkzDefPoint(0,0){o}
+          \tkzDefPoint(2,0){a}
+          \tkzDefPoint(0:3.2){Dcenter}\tkzDefPoint(0:2.3){Dpoint}
+          \tkzDrawCircle[color=blue](o,a)
+          \tkzDrawCircle[color=red](Dcenter,Dpoint)
+          \tkzDefPoint(30:3){p}
+          \tkzDefPointBy[inversion = center Dcenter through Dpoint](p)
+          \tkzGetPoint{q}
+          \draw[dashed, extended line, <->] (p)--(q);
+          \tkzDefPoint[thin](35:4){w1}
+          \tkzCircumCenter(p,q,w1)\tkzGetPoint{Ecenter}
+          \tkzDrawCircle[thin](Ecenter,p)
+          \tkzDefPointBy[inversion = center o through a](q)
+          \tkzGetPoint{q*}
+          \tkzDefPoint(30:4/3){p*}
+          \tkzDefPoint(35:1){w1*}
+          \tkzCircumCenter(p*,q*,w1*)\tkzGetPoint{Ecenter*}
+          \tkzDrawCircle[thin](Ecenter*,p*)
+          \tkzCircumCenter(p*,q*,o)\tkzGetPoint{Fcenter*}
+          \tkzDrawCircle[dashed](Fcenter*,p*)
+          \tkzDefPoint(0:4/2.3){Dpoint*}
+          \tkzDefPoint(3.2,.9){d1}
+          \tkzDefPointBy[inversion = center o through a](d1)
+          \tkzGetPoint{d1*}
+          \tkzDefPoint(3.2,-.9){d2}
+          \tkzDefPointBy[inversion = center o through a](d2)
+          \tkzGetPoint{d2*}
+          \tkzCircumCenter(Dpoint*,d1*,d2*)\tkzGetPoint{Dcenter*}
+          \tkzDrawCircle[color=red](Dcenter*,Dpoint*)
+          \tkzDrawPoints[fill=red](p,q)
+          \tkzDrawPoints(o,q*,p*)
+          \tkzLabelPoint[left](p){\(p\)}
+          \tkzLabelPoint[right](q){\(q\)}
+          \tkzLabelPoint[above right=-3pt](p*){\(p^*\)}
+          \tkzLabelPoint[below right=-5pt](q*){\(q^*\)}
+          \draw (120:2.2) node{\(C\)};
+          \draw (2.5,2.5) node{\(F\)};
+          \draw (Ecenter)++(60:1.25) node{\(E\)};
+          \draw (Dcenter)++(270:1.15) node{\(D\)};
+          \draw (Dcenter*)++(300:.6) node{\(D^*\)};
+          \draw (Ecenter*)++(180:.5) node{\(E^*\)};
+          \draw (Fcenter*)++(240:.9) node{\(F^*\)};
+          \end{tikzpicture}
+</pre>
+
+      <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11625953; 
+var sc_invisible=1; 
+var sc_security="f68ed8d5"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="site stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11625953/0/f68ed8d5/1/" alt="site
+stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

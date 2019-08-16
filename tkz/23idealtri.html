@@ -1,0 +1,66 @@
+<!DOCTYPE html><!--[Page design adapted from Slate theme by <a href="https://github.com/jasoncostello">Jason Costello</a>]-->
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Geometry with an Introduction to Cosmic Topology" />
+    <meta name="keywords" content="Mike Hitchman">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="icon" href="../images/favicon.gif">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <title>GCT - TikZ Figures</title>
+  </head>
+
+<body>
+
+<img src="https://mphitchman.github.io/geometry/images/im-23idealtri.svg"/>
+
+<pre>
+\begin{tikzpicture}
+            \tkzDefPoint(0,0){o}
+            \tkzDefPoint(2,0){a}
+            \tkzDefPoint(0:1.2){p}
+            \tkzDefPoint(0:3.333){p*}
+            \tkzDefPoint(85:2){u}
+            \tkzDefPoint(40:2){v}
+            \tkzCircumCenter(p,p*,u)\tkzGetPoint{cu}
+            \tkzCircumCenter(p,p*,v)\tkzGetPoint{cv}
+            \tkzDrawArc[color=black](cu,u)(p)
+            \tkzDrawArc[color=black](cv,v)(p)
+            \tkzDefLine[perpendicular=through u,K=.-1](o,u);\tkzGetPoint{lu};
+            \tkzDefLine[perpendicular=through v,K=.-1](o,v);\tkzGetPoint{lv};
+            \tkzInterLL(lu,u)(lv,v)
+            \tkzGetPoint{cuv}
+            \tkzDrawArc[color=black](cuv,u)(v)
+            \tkzDrawCircle[dashed,color=blue](o,a)
+            \tkzDrawPoints[fill=white](u,v)
+            \tkzDrawPoint[fill=red](p)
+            \tkzLabelPoints(p)
+            \tkzLabelPoints[above](u)
+            \tkzLabelPoints[right](v)
+            \draw (p)++(100:.4) arc(100:145:.4cm) node[above]{\(\alpha\)};
+\end{tikzpicture}
+</pre>
+
+      <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11625953; 
+var sc_invisible=1; 
+var sc_security="f68ed8d5"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="site stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11625953/0/f68ed8d5/1/" alt="site
+stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

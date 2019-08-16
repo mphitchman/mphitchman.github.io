@@ -1,0 +1,80 @@
+<!DOCTYPE html><!--[Page design adapted from Slate theme by <a href="https://github.com/jasoncostello">Jason Costello</a>]-->
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Geometry with an Introduction to Cosmic Topology" />
+    <meta name="keywords" content="Mike Hitchman">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="icon" href="../images/favicon.gif">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <title>GCT - TikZ Figures</title>
+  </head>
+
+<body>
+
+<img src="https://mphitchman.github.io/geometry/images/im-clinecoord.svg"/>
+
+<pre>
+\begin{tikzpicture}[scale=.4]
+          \foreach \t in {0,22.5,...,337.5} \draw (0:0)--(\t:3.5);
+          \foreach \r in {1,2,3} \draw[dashed, blue] (0,0) circle (\r cm);
+          \tkzDefPoint(0,0){o}
+          \tkzDrawPoint[fill=red](o)
+          \draw (0,-6) node{(a)};
+          \begin{scope}[xshift=12cm]
+          \coordinate (p) at (-2,0);
+          \coordinate (q) at (2,0);
+          \coordinate (w1) at (-1,1);
+          \coordinate (w2) at (1,1);
+          \coordinate (w3) at (-2,2.5);
+          \coordinate (w4) at (2,2.5);
+          \coordinate (w5) at (-3,1);
+          \coordinate (w6) at (3,1);
+          \draw (-7,0)--(7,0);
+          \draw[dashed] (0,-5)--(0,5);
+          \tkzDefPoint(0,-2){c1}
+          \tkzDrawCircle[thin](c1,p)
+          \tkzDefPoint(0,-1){c2}
+          \tkzDrawCircle[thin](c2,p)
+          \tkzDefPoint(0,0){c3}
+          \tkzDrawCircle[thin](c3,p)
+          \tkzDefPoint(0,1){c4}
+          \tkzDrawCircle[thin](c4,p)
+          \tkzDefPoint(0,2){c5}
+          \tkzDrawCircle[thin](c5,p)
+          \typeIIcline[dashed,blue]{p}{q}{w1};
+          \typeIIcline[dashed,blue]{p}{q}{w2};
+          \typeIIcline[dashed,blue]{p}{q}{w3};
+          \typeIIcline[dashed,blue]{p}{q}{w4};
+          \typeIIcline[dashed,blue]{p}{q}{w5};
+          \typeIIcline[dashed,blue]{p}{q}{w6};
+          \draw (0,-6) node{(b)};
+          \tkzDrawPoints[fill=red](p,q)
+          \tkzLabelPoint[left](p){\(p\)}
+          \tkzLabelPoint[right](q){\(q\)}
+          \end{scope}\end{tikzpicture}
+</pre>
+
+      <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11625953; 
+var sc_invisible=1; 
+var sc_security="f68ed8d5"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="site stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11625953/0/f68ed8d5/1/" alt="site
+stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

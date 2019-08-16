@@ -1,0 +1,87 @@
+<!DOCTYPE html><!--[Page design adapted from Slate theme by <a href="https://github.com/jasoncostello">Jason Costello</a>]-->
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Geometry with an Introduction to Cosmic Topology" />
+    <meta name="keywords" content="Mike Hitchman">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="icon" href="../images/favicon.gif">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <title>GCT - TikZ Figures</title>
+  </head>
+
+<body>
+
+<img src="https://mphitchman.github.io/geometry/images/im-polarpaper3.svg"/>
+
+<pre>
+\begin{tikzpicture}[scale=.4,my arrow/.style={decorate,decoration={markings,mark=at position .8 with {\arrow[scale=1.5]{>}};}}]
+               \coordinate (p) at (-2,0);
+               \coordinate (q) at (2,0);
+               \coordinate (w3) at (-2,2.5);
+               \coordinate (w4) at (2,2.5);
+               \coordinate (w5) at (-3,1);
+               \coordinate (w6) at (3,1);
+               \coordinate (c1) at (0,-2);
+               \coordinate (c3) at (0,0);
+               \coordinate (c5) at (0,2);
+               \draw (-5,0)--(5,0);
+               \draw[dashed] (0,-5)--(0,5);
+                \typeIIcline[dashed,blue]{p}{q}{w3};
+                \typeIIcline[dashed,blue]{p}{q}{w4};
+                \typeIIcline[dashed,blue]{p}{q}{w5};
+                \typeIIcline[dashed,blue]{p}{q}{w6};
+                \tkzDefPoint(-1.7,1){z}
+                \tkzLabelPoint[left,fill=white](z){\(z\)}; 
+               \tkzDrawCircle[thin](c1,p)
+               \tkzDrawCircle[thin](c3,p)
+               \tkzDrawCircle[thin](c5,p)
+               \draw[thick,color=black,postaction={my arrow}] (150:2) arc (150:124:2);
+               \draw[thick,color=black,postaction={my arrow}] (-1.12,1.62) arc (27:75:2.19);
+               \tkzDefPoint(-2.7,2.8){Tz}
+                \tkzLabelPoint[left,fill=white](p){\(p\)};
+                \tkzLabelPoint[right,fill=white](q){\(q\)};
+               \tkzDrawPoints[size=7,fill=red](z,Tz,p,q)
+               \tkzLabelPoint[above left=-3pt](Tz){\(T(z)\)}
+               \begin{scope}[xshift=6cm]
+               \draw[very thick, ->] (105:4)  arc (105:75:8cm) node[above]{\(S\)};
+               \draw[very thick, ->] (310:5)  arc (285:255:8cm) node[below]{\(S^{-1}\)};
+               \end{scope}
+               \begin{scope}[xshift=13cm]
+               \foreach \t in {0,22.5,...,337.5} \draw (0:0)--(\t:4.5);
+               \foreach \r in {1,2,4} \draw[dashed] (0,0) circle (\r cm);
+               \tkzDefPoint(0,0){o}
+               \tkzDefPoint(67.5:4){v1}
+               \tkzDefPoint(22.5:2){v2}
+               \tkzDefPoint(22.5:4){u1}
+               \tkzDrawArc[thick,color=black,postaction={my arrow}](o,u1)(v1)
+               \tkzDrawSegment[thick,color=black,postaction={my arrow}](v2,u1)
+               \tkzDrawPoints[size=4,fill=red](o,v1,v2)
+               \tkzLabelPoint[above right=-4pt](v1){\(U(S(z))\)}
+               \tkzLabelPoint[below right=-4pt](v2){\(S(z)\)}
+               \end{scope}\end{tikzpicture}
+</pre>
+
+      <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11625953; 
+var sc_invisible=1; 
+var sc_security="f68ed8d5"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="site stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11625953/0/f68ed8d5/1/" alt="site
+stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

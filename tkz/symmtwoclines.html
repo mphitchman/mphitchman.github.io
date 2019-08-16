@@ -1,0 +1,67 @@
+<!DOCTYPE html><!--[Page design adapted from Slate theme by <a href="https://github.com/jasoncostello">Jason Costello</a>]-->
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Geometry with an Introduction to Cosmic Topology" />
+    <meta name="keywords" content="Mike Hitchman">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="icon" href="../images/favicon.gif">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <title>GCT - TikZ Figures</title>
+  </head>
+
+<body>
+
+<img src="https://mphitchman.github.io/geometry/images/im-symmtwoclines.svg"/>
+
+<pre>
+ \begin{tikzpicture}[scale=.8]
+              \tkzDefPoint(0,0){z1}
+              \tkzDefPoint(3,0){zo}
+              \tkzDefPoint(1,0){w}
+              \tkzDefPoint(1.5,0){m}
+              \draw[<->, dashed] (-2.6,0)-- (5.7,0) node[right]{\(L_1\)};
+              \tkzDrawCircle[color=blue](zo,w)
+              \tkzDrawCircle[dashed](m,zo)
+              \draw[<->, thick,color=blue](0,-2.6)--(0,2.6) node[above]{\(L\)};
+              \tkzInterCC(zo,w)(m,zo) \tkzGetPoints{t}{t1}
+              \tkzDrawSegments[dashed](z1,t t,zo)
+              \tkzMarkRightAngle[fill=lightgray](z1,t,zo)
+              \tkzDrawPoints(t,z1,zo)
+              \tkzLabelPoint[below](t){\(t\)}
+              \tkzLabelPoint[below right=-2pt](zo){\(z_o\)}
+              \tkzLabelPoint[below left=-2pt](z1){\(z_1\)}
+              \tkzDrawCircle[dashed](z1,t)
+              \tkzInterLC(z1,zo)(z1,t)\tkzGetPoints{p}{q}
+              \tkzDrawPoints[size=8,fill=red](p,q)
+              \tkzLabelPoint[below left=-2pt](p){\(p\)}
+              \tkzLabelPoint[below left=-2pt](q){\(q\)}
+              \draw (3,1) node{\(C_1\)};
+              \draw (3,-2.2) node[color=blue]{\(C\)};
+              \draw (220:2) node{\(C_2\)};
+              \end{tikzpicture}
+</pre>
+
+      <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11625953; 
+var sc_invisible=1; 
+var sc_security="f68ed8d5"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="site stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11625953/0/f68ed8d5/1/" alt="site
+stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

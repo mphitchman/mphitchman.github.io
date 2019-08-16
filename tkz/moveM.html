@@ -1,0 +1,232 @@
+<!DOCTYPE html><!--[Page design adapted from Slate theme by <a href="https://github.com/jasoncostello">Jason Costello</a>]-->
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Geometry with an Introduction to Cosmic Topology" />
+    <meta name="keywords" content="Mike Hitchman">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="icon" href="../images/favicon.gif">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <title>GCT - TikZ Figures</title>
+  </head>
+
+<body>
+
+<img src="https://mphitchman.github.io/geometry/images/im-moveM.svg"/>
+
+<pre>
+\begin{tikzpicture}
+             \begin{scope}
+             \clip(0,0) circle (2.5cm);
+             \tkzDefPoint(0,0){o}
+             \tkzDefPoint(2,0){a}
+             \tkzDrawCircle[thin, dashed,color=blue](o,a)
+             \tkzDefPoint(250:.8){p}
+             \tkzDefPoint(250:4/.8){p*}
+             \tkzDefPoint(175:1.8){ghost1}%%sets the line L1
+             \tkzDefPoint(225:1.8){ghost2}%% sets the Line L2
+             \tkzCircumCenter(p,p*,ghost1)\tkzGetPoint{c1}% Center of L1
+             \tkzCircumCenter(p,p*,ghost2)\tkzGetPoint{c2}% Center of L2
+             \tkzInterCC(o,a)(c1,p)\tkzGetPoints{u1}{v1}
+             \tkzInterCC(o,a)(c2,p)\tkzGetPoints{u2}{v2}
+             \tkzDrawArc[color=black](c1,u1)(v1)
+             \tkzDrawArc[color=black](c2,u2)(v2)
+             \tkzDefPoint(248:1.7){z}\tkzDefPoint(248:4/1.7){z*}
+             %%%% Drawing the M
+             \tkzDefPoint(248:1.4){m}\tkzDefPoint(248:4/1.4){m*}
+             \tkzDefPoint(255:1.6){n}
+             \tkzDefPoint(260:1.3){w}\tkzDefPoint(260:4/1.3){w*}
+             \tkzDefPoint(260:1.7){t}
+             \draw[thick,color=blue] (z)--(m) (w)--(t);
+             \tkzCircumCenter(m,m*,n)\tkzGetPoint{cm};
+             \tkzDrawArc[thick,color=blue](cm,n)(m);
+             \tkzCircumCenter(n,w,w*)\tkzGetPoint{cw};
+             \tkzDrawArc[thick,color=blue](cw,w)(n);
+             %%%% Reflecting corners of M across L1
+             \tkzDefPointBy[inversion = center c1 through p](z)\tkzGetPoint{z1}
+             \tkzDefPointBy[inversion = center c1 through p](m)\tkzGetPoint{m1}
+             \tkzDefPointBy[inversion = center c1 through p](n)\tkzGetPoint{n1}
+             \tkzDefPointBy[inversion = center c1 through p](w)\tkzGetPoint{w1}
+             \tkzDefPointBy[inversion = center c1 through p](t)\tkzGetPoint{t1}
+             %%% Reflecting these images across L2 to get T(points)
+             \tkzDefPointBy[inversion = center c2 through p](z1)\tkzGetPoint{z2}
+             \tkzDefPointBy[inversion = center c2 through p](m1)\tkzGetPoint{m2}
+             \tkzDefPointBy[inversion = center c2 through p](n1)\tkzGetPoint{n2}
+             \tkzDefPointBy[inversion = center c2 through p](w1)\tkzGetPoint{w2}
+             \tkzDefPointBy[inversion = center c2 through p](t1)\tkzGetPoint{t2}
+             %%% Reflecting the points2 across L1
+             \tkzDefPointBy[inversion = center c1 through p](z2)\tkzGetPoint{z3}
+             \tkzDefPointBy[inversion = center c1 through p](m2)\tkzGetPoint{m3}
+             \tkzDefPointBy[inversion = center c1 through p](n2)\tkzGetPoint{n3}
+             \tkzDefPointBy[inversion = center c1 through p](w2)\tkzGetPoint{w3}
+             \tkzDefPointBy[inversion = center c1 through p](t2)\tkzGetPoint{t3}
+             %%% Reflecting the points3 across L2
+             \tkzDefPointBy[inversion = center c2 through p](z3)\tkzGetPoint{z4}
+             \tkzDefPointBy[inversion = center c2 through p](m3)\tkzGetPoint{m4}
+             \tkzDefPointBy[inversion = center c2 through p](n3)\tkzGetPoint{n4}
+             \tkzDefPointBy[inversion = center c2 through p](w3)\tkzGetPoint{w4}
+             \tkzDefPointBy[inversion = center c2 through p](t3)\tkzGetPoint{t4}
+             %%% Drawing T(M)
+             \tkzDefPointBy[inversion = center o through a](m2)\tkzGetPoint{m2*}
+             \tkzDefPointBy[inversion = center o through a](w2)\tkzGetPoint{w2*}
+             \tkzCircumCenter(z2,m2,m2*)\tkzGetPoint{Tcz};
+             \tkzDrawArc[thick,color=blue](Tcz,z2)(m2);
+             \tkzCircumCenter(m2,m2*,n2)\tkzGetPoint{Tcn};
+             \tkzDrawArc[thick,color=blue](Tcn,n2)(m2);
+             \tkzCircumCenter(n2,w2,w2*)\tkzGetPoint{Tcw};
+             \tkzDrawArc[thick,color=blue](Tcw,n2)(w2);
+             \tkzCircumCenter(t2,w2*,w2)\tkzGetPoint{Tct};
+             \tkzDrawArc[thick,color=blue](Tct,t2)(w2);
+             %%% Drawing T(T(M))
+             \tkzDefPointBy[inversion = center o through a](m4)\tkzGetPoint{m4*}
+             \tkzDefPointBy[inversion = center o through a](w4)\tkzGetPoint{w4*}
+             \tkzCircumCenter(z4,m4,m4*)\tkzGetPoint{Tcz4};
+             \tkzDrawArc[thick,color=blue](Tcz4,m4)(z4);
+             \tkzCircumCenter(m4,m4*,n4)\tkzGetPoint{Tcn4};
+             \tkzDrawArc[thick,color=blue](Tcn4,n4)(m4);
+             \tkzCircumCenter(n4,w4,w4*)\tkzGetPoint{Tcw4};
+             \tkzDrawArc[thick,color=blue](Tcw4,w4)(n4);
+             \tkzCircumCenter(t4,w4*,w4)\tkzGetPoint{Tct4};
+             \tkzDrawArc[thick,color=blue](Tct4,w4)(t4);
+             %%%% Lines of Motion
+             \tkzCircumCenter(p,p*,z)\tkzGetPoint{cpz}
+             \tkzDefLine[perpendicular=through z,K=1](cpz,z)\tkzGetPoint{vz};
+             \tkzInterLL(z,vz)(p,p*)\tkzGetPoint{centerz}
+             \tkzDrawCircle[very thin, dashed](centerz,z)
+             \tkzCircumCenter(p,p*,w)\tkzGetPoint{cpw}
+             \tkzDefLine[perpendicular=through w,K=1](cpw,w)\tkzGetPoint{vw};
+             \tkzInterLL(w,vw)(p,p*)\tkzGetPoint{centerw}
+             \tkzDrawCircle[very thin, dashed](centerw,w)
+             \tkzDrawPoints[fill=blue](w,w2,w4)
+             \tkzDrawPoints[size=8,fill=red](z,z2,z4)
+             \tkzLabelPoint[above](p){\(p\)}
+             \tkzLabelPoint[below](z){\(z\)}
+             \tkzLabelPoint[right](z2){\(T(z)\)}
+             \tkzLabelPoint[left = -2pt](z4){\(T^2(z)\)}
+             \draw (175:2.3) node{\(L_1\)};
+             \draw (225:2.3) node{\(L_2\)};
+             \tkzDrawPoint[size=12,fill=red](p)
+             \end{scope}
+             \begin{scope}[xshift=6cm]
+             \clip(0,0) circle (2.5cm);
+             \tkzDefPoint(0,0){o}
+             \tkzDefPoint(2,0){a}
+             \tkzDrawCircle[thin, dashed,color=blue](o,a)
+             \tkzDefPoint(280:2){p}
+             \tkzDefPoint(60:2){q}
+             \tkzDefPoint(270:1.1){ghost1}%%point on line L1
+             \tkzDefPoint(270:.5){ghost2}%% point on Line L2
+             \tkzCircumCenter(p,q,ghost1)\tkzGetPoint{cg1}
+             \tkzDefLine[perpendicular=through ghost1,K=1](cg1,ghost1)\tkzGetPoint{g1};
+             \tkzInterLL(ghost1,g1)(p,q)\tkzGetPoint{c1}
+             \tkzInterCC(c1,ghost1)(o,a)\tkzGetPoints{v1}{u1}
+             \tkzDrawArc[color=black](c1,u1)(v1)
+             \tkzCircumCenter(p,q,ghost2)\tkzGetPoint{cg2}
+             \tkzDefLine[perpendicular=through ghost2,K=1](cg2,ghost2)\tkzGetPoint{g2};
+             \tkzInterLL(ghost2,g2)(p,q)\tkzGetPoint{c2}
+             \tkzInterCC(c2,ghost2)(o,a)\tkzGetPoints{v2}{u2}
+             \tkzDrawArc[color=black](c2,u2)(v2)
+             \tkzDrawPoints(p,q)
+             \tkzDefPoint(248:1.7){z}\tkzDefPoint(248:4/1.7){z*}
+             %%%% Drawing the M
+             \tkzDefPoint(248:1.4){m}\tkzDefPoint(248:4/1.4){m*}
+             \tkzDefPoint(255:1.6){n}
+             \tkzDefPoint(260:1.3){w}\tkzDefPoint(260:4/1.3){w*}
+             \tkzDefPoint(260:1.7){t}
+             \draw[thick,color=blue] (z)--(m) (w)--(t);
+             \tkzCircumCenter(m,m*,n)\tkzGetPoint{cm};
+             \tkzDrawArc[thick,color=blue](cm,n)(m);
+             \tkzCircumCenter(n,w,w*)\tkzGetPoint{cw};
+             \tkzDrawArc[thick,color=blue](cw,w)(n);
+             %%%% Reflecting corners of M across L1
+             \tkzDefPointBy[inversion = center c1 through ghost1](z)\tkzGetPoint{z1}
+             \tkzDefPointBy[inversion = center c1 through ghost1](m)\tkzGetPoint{m1}
+             \tkzDefPointBy[inversion = center c1 through ghost1](n)\tkzGetPoint{n1}
+             \tkzDefPointBy[inversion = center c1 through ghost1](w)\tkzGetPoint{w1}
+             \tkzDefPointBy[inversion = center c1 through ghost1](t)\tkzGetPoint{t1}
+             %%% Reflecting these images across L2 to get T(points)
+             \tkzDefPointBy[inversion = center c2 through ghost2](z1)\tkzGetPoint{z2}
+             \tkzDefPointBy[inversion = center c2 through ghost2](m1)\tkzGetPoint{m2}
+             \tkzDefPointBy[inversion = center c2 through ghost2](n1)\tkzGetPoint{n2}
+             \tkzDefPointBy[inversion = center c2 through ghost2](w1)\tkzGetPoint{w2}
+             \tkzDefPointBy[inversion = center c2 through ghost2](t1)\tkzGetPoint{t2}
+             %%% Reflecting the points2 across L1
+             \tkzDefPointBy[inversion = center c1 through ghost1](z2)\tkzGetPoint{z3}
+             \tkzDefPointBy[inversion = center c1 through ghost1](m2)\tkzGetPoint{m3}
+             \tkzDefPointBy[inversion = center c1 through ghost1](n2)\tkzGetPoint{n3}
+             \tkzDefPointBy[inversion = center c1 through ghost1](w2)\tkzGetPoint{w3}
+             \tkzDefPointBy[inversion = center c1 through ghost1](t2)\tkzGetPoint{t3}
+             %%% Reflecting the points3 across L2
+             \tkzDefPointBy[inversion = center c2 through ghost2](z3)\tkzGetPoint{z4}
+             \tkzDefPointBy[inversion = center c2 through ghost2](m3)\tkzGetPoint{m4}
+             \tkzDefPointBy[inversion = center c2 through ghost2](n3)\tkzGetPoint{n4}
+             \tkzDefPointBy[inversion = center c2 through ghost2](w3)\tkzGetPoint{w4}
+             \tkzDefPointBy[inversion = center c2 through ghost2](t3)\tkzGetPoint{t4}
+             %%% Drawing T(M)
+             \tkzDefPointBy[inversion = center o through a](m2)\tkzGetPoint{m2*}
+             \tkzDefPointBy[inversion = center o through a](w2)\tkzGetPoint{w2*}
+             \tkzCircumCenter(z2,m2,m2*)\tkzGetPoint{Tcz};
+             \tkzDrawArc[thick,color=blue](Tcz,z2)(m2);
+             \tkzCircumCenter(m2,m2*,n2)\tkzGetPoint{Tcn};
+             \tkzDrawArc[thick,color=blue](Tcn,n2)(m2);
+             \tkzCircumCenter(n2,w2,w2*)\tkzGetPoint{Tcw};
+             \tkzDrawArc[thick,color=blue](Tcw,n2)(w2);
+             \tkzCircumCenter(t2,w2*,w2)\tkzGetPoint{Tct};
+             \tkzDrawArc[thick,color=blue](Tct,t2)(w2);
+             %%% Drawing T(T(M))
+             \tkzDefPointBy[inversion = center o through a](m4)\tkzGetPoint{m4*}
+             \tkzDefPointBy[inversion = center o through a](w4)\tkzGetPoint{w4*}
+             \tkzCircumCenter(z4,m4,m4*)\tkzGetPoint{Tcz4};
+             \tkzDrawArc[thick,color=blue](Tcz4,z4)(m4);
+             \tkzCircumCenter(m4,m4*,n4)\tkzGetPoint{Tcn4};
+             \tkzDrawArc[thick,color=blue](Tcn4,n4)(m4);
+             \tkzCircumCenter(n4,w4,w4*)\tkzGetPoint{Tcw4};
+             \tkzDrawArc[thick,color=blue](Tcw4,n4)(w4);
+             \tkzCircumCenter(t4,w4*,w4)\tkzGetPoint{Tct4};
+             \tkzDrawArc[thick,color=blue](Tct4,t4)(w4);
+             %%% Lines of Motion
+             \tkzCircumCenter(z,p,q)\tkzGetPoint{Cz}
+             \tkzCircumCenter(w,p,q)\tkzGetPoint{Cw}
+             \tkzDrawArc[very thin,dashed](Cz,q)(p)
+             \tkzDrawArc[very thin,dashed](Cw,q)(p)
+             \tkzDrawPoints[fill=blue](w,w2,w4)
+             \tkzDrawPoints[size=8,fill=red](z,z2,z4)
+             \tkzLabelPoint[below](p){\(p\)}
+             \tkzLabelPoint[above](q){\(q\)}
+             \tkzLabelPoint[below](z){\(z\)}
+             \tkzLabelPoint[left = -2pt](z2){\(T(z)\)}
+             \tkzLabelPoint[left = -2pt](z4){\(T^2(z)\)}
+             \draw (310:2.2) node{\(L_1\)};
+             \draw (333:2.2) node{\(L_2\)};
+             \tkzDrawPoints[size=12,fill=white](p,q)
+             \end{scope}
+             \begin{scope}[yshift=-.8cm]
+             \draw (0,-2) node{(a)};
+             \draw (6,-2) node{(b)};
+             \end{scope}
+\end{tikzpicture}
+</pre>
+
+	<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11625953; 
+var sc_invisible=1; 
+var sc_security="f68ed8d5"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="site stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11625953/0/f68ed8d5/1/" alt="site
+stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>
