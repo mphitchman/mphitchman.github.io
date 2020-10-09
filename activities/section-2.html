@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-09T10:21:06-07:00       *-->
+<!--*       on 2020-10-09T10:39:12-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -313,37 +313,27 @@ z0=1/2
 T(z)=e^(I*theta)*(z-z0)/(1-conjugate(z0)*z)
 T(1/2*I)
 </script></div></article><article class="example example-like" id="example-9"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Exercise 5.4.6.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Distance between points in \((\mathbb{D},{\cal H})\).</span>
 </h6>
-<p id="p-32">If two sides of a hyperbolic triangle are Euclidean segments, then the included angle can be calculated using TODO.  For instance, the angle at 0 is \(45^\circ\text{.}\)</p>
-<p id="p-33">To find the angle at another corner, we first transform the triangle so that the corner is moved to the origin.  A Sage cell is handy here.  To move \(\frac{1}{2}\) to the origin, we use the following Sage cell to build such a map in \(\cal H\) and track the image of the other two points.</p>
-<div class="sagecell-sage" id="sage-22"><script type="text/x-sage">var('z')
-theta=0
-z0=1/2
-T(z)=e^(I*theta)*(z-z0)/(1-conjugate(z0)*z)
-print("T(0)=",T(0), "and T(1/2+1/2*I)=",T(1/2+1/2*I))
-</script></div></article><article class="example example-like" id="example-10"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Distance between points in \((\mathbb{D},{\cal H})\).</span>
-</h6>
-<p id="p-34">The shortest path between points \(p\) and \(q\) in \((\mathbb{D},{\cal H})\) is along the hyperbolic segement joining them, and we derive this distance, \(d_H(p,q)\text{,}\) in Section 5.3 to be</p>
+<p id="p-32">The shortest path between points \(p\) and \(q\) in \((\mathbb{D},{\cal H})\) is along the hyperbolic segement joining them, and we derive this distance, \(d_H(p,q)\text{,}\) in Section 5.3 to be</p>
 <div class="displaymath">
 \begin{equation*}
-d_H(p,q) = \ln\left(\frac{1+|T(q)|}{1-|T(q)|}\right)\text{.}
+d_H(p,q) = \ln\left[\frac{|1-\overline{p}q|+|q-p|}{|1-\overline{p}q|-|q-p|}\right]\text{.}
 \end{equation*}
 </div>
 <p data-braille="continuation">Here are two Sage cells, the first defines the distance function, and the second evaluates distance between two specified points.</p>
-<div class="sagecell-sage" id="sage-23"><script type="text/x-sage">         var('z','w')
+<div class="sagecell-sage" id="sage-22"><script type="text/x-sage">         var('z','w')
 d_H(z,w)=log((abs(1-conjugate(z)*w)+abs(w-z))/(abs(1-conjugate(z)*w)-abs(w-z)))
 </script></div>
-<div class="sagecell-sage" id="sage-24"><script type="text/x-sage">p=.2+.2*I
+<div class="sagecell-sage" id="sage-23"><script type="text/x-sage">p=.2+.2*I
 q=.5
 d_H(p,q)
-</script></div></article><article class="example example-like" id="example-11"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Exercise 5.4.6.</span>
+</script></div></article><article class="example example-like" id="example-10"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Exercise 5.4.6.</span>
 </h6>
-<p id="p-35">If two sides of a hyperbolic triangle are Euclidean segments, then the included angle can be calculated using TODO.  For instance, the angle at 0 is \(45^\circ\text{.}\)</p>
-<p id="p-36">To find the angle at another corner, we first transform the triangle so that the corner is moved to the origin.  A Sage cell is handy here.  To move \(\frac{1}{2}\) to the origin, we use the following Sage cell to build such a map in \(\cal H\) and track the image of the other two points.</p>
-<div class="sagecell-sage" id="sage-25"><script type="text/x-sage">var('z')
+<p id="p-33">If two sides of a hyperbolic triangle are Euclidean segments, then the included angle can be calculated using TODO.  For instance, the angle at 0 is \(45^\circ\text{.}\)</p>
+<p id="p-34">To find the angle at another corner, we first transform the triangle so that the corner is moved to the origin.  A Sage cell is handy here.  To move \(\frac{1}{2}\) to the origin, we use the following Sage cell to build such a map in \(\cal H\) and track the image of the other two points.</p>
+<div class="sagecell-sage" id="sage-24"><script type="text/x-sage">var('z')
 theta=0
 z0=1/2
 T(z)=e^(I*theta)*(z-z0)/(1-conjugate(z0)*z)
