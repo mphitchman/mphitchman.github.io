@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-08-23T14:54:13-07:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-13T14:30:24-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
@@ -21,16 +23,22 @@
 </script>
 </head>
 <body>
-<article class="example example-like"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Exercise 5.4.6.</span>
+<article class="example example-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Distance between points in \((\mathbb{D},{\cal H})\).</span>
 </h6>
-<p>If two sides of a hyperbolic triangle are Euclidean segments, then the included angle can be calculated using TODO.  For instance, the angle at 0 is \(45^\circ\text{.}\)</p>
-<p>To find the angle at another corner, we first transform the triangle so that the corner is moved to the origin.  A Sage cell is handy here.  To move \(\frac{1}{2}\) to the origin, we use the following Sage cell to build such a map in \(\cal H\) and track the image of the other two points.</p>
-<div class="sagecell-sage" id="sage-22"><script type="text/x-sage">var('z')
-theta=0
-z0=1/2
-T(z)=e^(I*theta)*(z-z0)/(1-conjugate(z0)*z)
-print("T(0)=",T(0), "and T(1/2+1/2*I)=",T(1/2+1/2*I))
+<p>The shortest path between points \(p\) and \(q\) in \((\mathbb{D},{\cal H})\) is along the hyperbolic segement joining them, and we derive this distance, \(d_H(p,q)\text{,}\) in Section 5.3 to be</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+d_H(p,q) = \ln\left[\frac{|1-\overline{p}q|+|q-p|}{|1-\overline{p}q|-|q-p|}\right]\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Here are two Sage cells, the first defines the distance function, and the second evaluates distance between two specified points.</p>
+<div class="sagecell-sage" id="sage-22"><script type="text/x-sage">         var('z','w')
+d_H(z,w)=log((abs(1-conjugate(z)*w)+abs(w-z))/(abs(1-conjugate(z)*w)-abs(w-z)))
+</script></div>
+<div class="sagecell-sage" id="sage-23"><script type="text/x-sage">p=.2+.2*I
+q=.5
+d_H(p,q)
 </script></div></article><span class="incontext"><a href="section-2.html#example-9">in-context</a></span>
 </body>
 </html>

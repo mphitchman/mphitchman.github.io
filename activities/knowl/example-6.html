@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-07-10T06:40:53-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
+</head>
+<body>
+<article class="example example-like"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Exercise 5.4.6.</span>
+</h6>
+<p>If two sides of a hyperbolic triangle are Euclidean segments, then the included angle can be calculated using TODO.  For instance, the angle at 0 is \(45^\circ\text{.}\)</p>
+<p>To find the angle at another corner, we first transform the triangle so that the corner is moved to the origin.  A Sage cell is handy here.  To move \(\frac{1}{2}\) to the origin, we use the following Sage cell to build such a map in \(\cal H\) and track the image of the other two points.</p>
+<div class="sagecell-sage" id="sage-15"><script type="text/x-sage">var('z')
+theta=0
+z0=1/2
+T(z)=e^(I*theta)*(z-z0)/(1-conjugate(z0)*z)
+print("T(0)=",T(0), "and T(1/2+1/2*I)=",T(1/2+1/2*I))
+</script></div></article><span class="incontext"><a href="sage.html#example-6">in-context</a></span>
+</body>
+</html>

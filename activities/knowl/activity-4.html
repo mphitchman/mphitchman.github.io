@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-07-09T13:59:50-07:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
+</head>
+<body>
+<article class="project-like"><h6 class="heading">
+<span class="type">Activity</span>  <span class="title">Möbius transformations.</span>
+</h6>
+<p>First, we can define our Möbius transformation by specifying values of the constants: <div class="sagecell-sage" id="sage-10"><script type="text/x-sage">z=var('z')
+a=2+I
+b=1
+c=1
+d=1-I
+T(z)=(a*z+b)/(c*z+d)
+</script></div> Investigate our Möbius transformation: Questions</p>
+<ol class="decimal">
+<li>What is the determinant of \(T\text{?}\)</li>
+<li>What are the fixed points of \(T\text{?}\) <div class="sagecell-sage" id="sage-11"><script type="text/x-sage">print("det(T) = ",a*d-b*c)
+zinf = -d/c
+winf = a/c
+print("The pole of T is ",zinf)
+print("The inverse pole of T is ",winf)
+print("The fixed points of T are: ")
+solve(T(z)-z,z)
+</script></div>
+</li>
+</ol></article><span class="incontext"><a href="sage.html#activity-4">in-context</a></span>
+</body>
+</html>
