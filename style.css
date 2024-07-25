@@ -1,6 +1,9 @@
 /* Whole document: */
 body{
   font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 /* Headers */
 h1.title {
@@ -12,8 +15,8 @@ h1 { /* Header 1 */
   color: Black;
 }
 h2 { /* Header 2 */
-    font-size: 22px;
-      color: DarkGreen;
+    font-size: 24px;
+      color: Black;
 }
 h3 { /* Header 3 */
   font-size: 18px;
@@ -48,4 +51,29 @@ img[alt$="><"] {
   height: auto;
   margin: auto;
   float: none!important;
+}
+
+
+.tiles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tile {
+  flex: 1 0 300px;
+  background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+}
+
+a:link {
+  color: blue;
+  text-decoration: none;
 }
