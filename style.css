@@ -7,12 +7,12 @@ body{
 }
 /* Headers */
 h1.title {
-  font-size: 26px;
+  font-size: 28px;
   color: DarkGreen;
 }
 h1 { /* Header 1 */
-  font-size: 24px;
-  color: Black;
+  font-size: 26px;
+  color: DarkGreen;
 }
 h2 { /* Header 2 */
     font-size: 24px;
