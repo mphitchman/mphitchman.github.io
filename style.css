@@ -4,16 +4,16 @@ body{
 }
 /* Headers */
 h1.title {
-  font-size: 24px;
+  font-size: 26px;
   color: DarkGreen;
 }
 h1 { /* Header 1 */
-  font-size: 22px;
-  color: DarkGreen;
+  font-size: 24px;
+  color: Black;
 }
 h2 { /* Header 2 */
-    font-size: 20px;
-      color: DarkRed;
+    font-size: 22px;
+      color: DarkGreen;
 }
 h3 { /* Header 3 */
   font-size: 18px;
@@ -25,9 +25,27 @@ code.r{ /* Code block */
 
 
 blockquote {
+    background: #fce4a8;
     padding: 10px 20px;
     margin: 0 0 20px;
-    font-size: 15px;
-    border-left: 1px solid #eee;
-    border-color: blue;
+    font-size: 16px;
+    border-left: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+
+img[alt$=">"] {
+  float: right;
+}
+
+img[alt$="<"] {
+  float: left;
+}
+
+img[alt$="><"] {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  float: none!important;
 }

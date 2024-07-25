@@ -1,24 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="228pt" height="201pt" viewBox="0 0 228 201" version="1.1">
-<g id="surface1">
-<path style="fill-rule:nonzero;fill:rgb(94.999695%,100%,94.999695%);fill-opacity:1;stroke-width:0.79701;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -113.3855 -99.212094 L -113.3855 99.213687 L 113.387937 99.213687 L 113.387937 -99.212094 Z M -113.3855 -99.212094 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -113.3855 -99.212094 L -113.3855 99.213687 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -85.04175 -99.212094 L -85.04175 99.213687 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -56.694094 -99.212094 L -56.694094 99.213687 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -28.346438 -99.212094 L -28.346438 99.213687 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0.00121875 -99.212094 L 0.00121875 99.213687 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 28.344969 -99.212094 L 28.344969 99.213687 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 56.692625 -99.212094 L 56.692625 99.213687 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 85.040281 -99.212094 L 85.040281 99.213687 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 113.387937 -99.212094 L 113.387937 99.213687 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -113.3855 -99.212094 L 113.387937 -99.212094 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -113.3855 -70.868344 L 113.387937 -70.868344 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -113.3855 -42.520688 L 113.387937 -42.520688 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -113.3855 -14.173031 L 113.387937 -14.173031 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -113.3855 14.174625 L 113.387937 14.174625 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -113.3855 42.518375 L 113.387937 42.518375 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -113.3855 70.866031 L 113.387937 70.866031 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill:none;stroke-width:0.19925;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -113.3855 99.213687 L 113.387937 99.213687 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-<path style="fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;stroke-width:0.79701;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -56.694094 -42.520688 L -56.694094 42.518375 L 56.692625 42.518375 L 56.692625 -42.520688 Z M -56.694094 -42.520688 " transform="matrix(1,0,0,-1,114.198,100.409)"/>
-</g>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 163.25 163.25">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: .75px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #231f20;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 1.25px;
+      }
+
+      .cls-3 {
+        stroke: #2e3192;
+      }
+
+      .cls-3, .cls-4 {
+        stroke-width: .5px;
+      }
+
+      .cls-4 {
+        stroke: #be1e2d;
+      }
+    </style>
+    <symbol id="_01" data-name="01" viewBox="0 0 18.25 18.25">
+      <polyline class="cls-4" points="0 18 18 18 18 0"/>
+    </symbol>
+    <symbol id="_10" data-name="10" viewBox="0 0 18.25 18.25">
+      <polyline class="cls-3" points=".25 18.25 .25 .25 18.25 .25"/>
+    </symbol>
+  </defs>
+  <rect class="cls-2" x="81.63" y="81.63" width="0" height="162" transform="translate(-81 244.25) rotate(-90)"/>
+  <rect class="cls-2" x="-80.37" y="81.62" width="162" height="0" transform="translate(-81 82.25) rotate(-90)"/>
+  <polygon class="cls-2" points="162.63 162.62 162.63 144.62 144.63 144.62 144.63 126.62 126.63 126.62 126.63 108.62 108.63 108.62 108.63 90.62 90.63 90.62 90.63 72.62 72.63 72.62 72.63 54.62 54.63 54.62 54.63 36.62 36.63 36.62 36.63 18.62 18.63 18.62 18.63 .62 .63 .62 .63 162.62 162.63 162.62"/>
+  <line class="cls-1" x1=".63" y1="144.62" x2="144.63" y2="144.62"/>
+  <line class="cls-1" x1=".63" y1="126.62" x2="144.63" y2="126.62"/>
+  <line class="cls-1" x1=".63" y1="108.62" x2="108.63" y2="108.62"/>
+  <line class="cls-1" x1=".63" y1="90.62" x2="90.63" y2="90.62"/>
+  <line class="cls-1" x1=".63" y1="72.62" x2="72.63" y2="72.62"/>
+  <line class="cls-1" x1=".63" y1="54.62" x2="54.63" y2="54.62"/>
+  <line class="cls-1" x1=".63" y1="36.62" x2="36.63" y2="36.62"/>
+  <line class="cls-1" x1=".63" y1="18.62" x2="36.63" y2="18.62"/>
+  <line class="cls-1" x1="18.63" y1="18.62" x2="18.62" y2="162.62"/>
+  <line class="cls-1" x1="36.63" y1="18.62" x2="36.62" y2="162.62"/>
+  <line class="cls-1" x1="54.63" y1="54.63" x2="54.62" y2="162.62"/>
+  <line class="cls-1" x1="72.63" y1="72.62" x2="72.62" y2="162.62"/>
+  <line class="cls-1" x1="90.63" y1="90.62" x2="90.63" y2="162.62"/>
+  <line class="cls-1" x1="108.63" y1="108.63" x2="108.63" y2="162.62"/>
+  <line class="cls-1" x1="126.63" y1="126.63" x2="126.63" y2="162.62"/>
+  <line class="cls-1" x1="144.63" y1="126.63" x2="144.63" y2="162.62"/>
+  <use width="18.25" height="18.25" transform="translate(117.88 135.38) rotate(90)" xlink:href="#_10"/>
+  <polyline class="cls-4" points="135.63 135.63 135.63 153.63 153.63 153.63"/>
+  <use width="18.25" height="18.25" transform="translate(99.63 135.38) rotate(90)" xlink:href="#_01"/>
+  <use width="18.25" height="18.25" transform="translate(81.88 99.38) rotate(90)" xlink:href="#_10"/>
+  <use width="18.25" height="18.25" transform="translate(117.63 99.38) rotate(90)" xlink:href="#_01"/>
+  <use width="18.25" height="18.25" transform="translate(81.63 63.38) rotate(90)" xlink:href="#_01"/>
+  <use width="18.25" height="18.25" transform="translate(27.63 9.63) rotate(90)" xlink:href="#_01"/>
+  <use width="18.25" height="18.25" transform="translate(45.63 45.38) rotate(90)" xlink:href="#_10"/>
+  <use width="18.25" height="18.25" transform="translate(26.45 45.75) rotate(90)" xlink:href="#_01"/>
+  <use width="18.25" height="18.25" transform="translate(26.97 81.6) rotate(90)" xlink:href="#_01"/>
+  <use width="18.25" height="18.25" transform="translate(45.69 81.07) rotate(90)" xlink:href="#_10"/>
+  <use width="18.25" height="18.25" transform="translate(63.08 135.62) rotate(90)" xlink:href="#_01"/>
+  <use width="18.25" height="18.25" transform="translate(26.97 135.36) rotate(90)" xlink:href="#_01"/>
+  <use width="18.25" height="18.25" transform="translate(26.97 117.44) rotate(90)" xlink:href="#_10"/>
+  <use width="18.25" height="18.25" transform="translate(62.29 117.96) rotate(90)" xlink:href="#_10"/>
 </svg>
