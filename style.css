@@ -73,7 +73,7 @@ img[alt$="><"] {
   transform: scale(1.05);
 }
 
-a:link {
-  color: blue;
+.tile a {
+  color: steelblue;
   text-decoration: none;
 }
