@@ -7,21 +7,24 @@ body{
 }
 /* Headers */
 h1.title {
-  font-size: 28px;
+  font-size: 24px;
   color: DarkGreen;
 }
 h1 { /* Header 1 */
-  font-size: 26px;
-  color: DarkGreen;
+  font-size: 2em;
+  display: DarkGreen;
 }
 h2 { /* Header 2 */
-    font-size: 24px;
-      color: Black;
+    font-size: 1.2em;
+    display: black;
+    font-weight: bold;
 }
+
 h3 { /* Header 3 */
   font-size: 18px;
   color: DarkRed;
 }
+
 code.r{ /* Code block */
     font-size: 15px;
 }
@@ -63,9 +66,9 @@ img[alt$="><"] {
 .tile {
   flex: 1 0 300px;
   background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 8px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -76,4 +79,12 @@ img[alt$="><"] {
 .tile a {
   color: steelblue;
   text-decoration: none;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  /* Set the hr color */
+  color: #5f5f5f;  /* old IE */
+  background-color: steelblue;  /* Modern Browsers */
 }
